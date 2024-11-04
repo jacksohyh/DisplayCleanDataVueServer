@@ -7,7 +7,6 @@ require('dotenv').config(); // Use environment variables
 const app = express();
 const PORT = process.env.PORT || 5000; // Use Render's dynamic port, fallback to 5000 for local
 
-// Enable CORS for local development
 app.use(cors());
 
 // Define a route to handle the authentication
@@ -77,5 +76,5 @@ app.get('/api/fetchData', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Proxy server running on http://localhost:${PORT}`);
+  console.log(`Proxy server running on ${PORT}`);
 });
